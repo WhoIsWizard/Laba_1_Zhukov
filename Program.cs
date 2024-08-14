@@ -10,6 +10,7 @@ namespace Laba_1_Zhukov
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
