@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Laba_1_Zhukov
 {
-    internal class Passport_data
+    internal class People_data
     {
         public int ID;
         public string Name;
@@ -21,7 +21,16 @@ namespace Laba_1_Zhukov
 
         public string Passport_Expired_in()
         {
-            return 
+            // Преобразуем строки с датами в DateTime
+            DateTime expireDate = DateTime.Parse(Date_Of_expire);
+            DateTime currentDate = DateTime.Now;
+
+            // Вычисляем разницу между датами
+            TimeSpan difference = expireDate.Subtract(currentDate);
+
+            // Возвращаем разницу в днях, часах и минутах
+            return $"Passport expires in {difference.Days} days, {difference.Hours} hours, and {difference.Minutes} minutes.";
         }
+
     }
 }
