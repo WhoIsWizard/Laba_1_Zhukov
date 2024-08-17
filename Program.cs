@@ -31,9 +31,9 @@ namespace Laba_1_Zhukov
             string sIndividualTaxNumber = Console.ReadLine();
             Console.WriteLine();
 
-            // Створюємо новий екземпляр Person
+            // Створюємо новий екземпляр people_data
             People_data person = new People_data();
-            person.ID = int.Parse(sID);
+            person.ID = sID;
             person.Name = sName;
             person.Surname = sSurname;
             person.Date_Of_Birth = sDateOfBirth;
@@ -41,7 +41,7 @@ namespace Laba_1_Zhukov
             person.sex = keyHasSex.Key == ConsoleKey.Y ? true : false;
             person.Date_Of_Issue = sDateOfIssue;
             person.Date_Of_expire = sDateOfExpire;
-            person.Individual_tax_number = int.Parse(sIndividualTaxNumber);
+            person.Individual_tax_number = sIndividualTaxNumber;
 
             // Виводимо інформацію про особу та термін дії паспорта
             Console.WriteLine("Дані про особу:");
