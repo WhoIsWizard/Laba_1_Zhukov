@@ -29,7 +29,7 @@ namespace Laba_1_Zhukov
             TimeSpan difference = expireDate.Subtract(currentDate);
 
             // Возвращаем разницу в днях, часах и минутах
-            return $"Passport expires in {difference.Days} days, {difference.Hours} hours, and {difference.Minutes} minutes.";
+            return $"Passport expires in {difference.Days / 365} years";
         }
 
     }
